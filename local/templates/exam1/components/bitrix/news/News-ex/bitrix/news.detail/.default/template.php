@@ -54,7 +54,7 @@ $img = SITE_TEMPLATE_PATH."/img/rew/no_photo.jpg"
 
 
 <?  $Item = CFile::GetFileArray($File)  ?>
-						<div  class="exam-review-item-doc"><img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH?>/img/icons/pdf_ico_40.png"> <a href="<?=$Item["SRC"]?>"> <?=$Item["ORIGINAL_NAME"]?> </div>
+						<div  class="exam-review-item-doc"><img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH?>/img/icons/pdf_ico_40.png"> <a href="<?=$Item["SRC"]?> "download > <?=$Item["ORIGINAL_NAME"]?> </div>
 
 						<?  
 					
