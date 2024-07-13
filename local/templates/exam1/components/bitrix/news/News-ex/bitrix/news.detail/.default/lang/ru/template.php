@@ -1,3 +1,5 @@
 <?
-$MESS["Year"] = "г.,";
+$MESS["YEAR"] = "г.,";
+$MESS["DOCUMENT"] = "Документы:";
+
 ?>
