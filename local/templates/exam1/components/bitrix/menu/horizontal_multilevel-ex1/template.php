@@ -10,7 +10,7 @@
                     <a href="" class="btn-menu btn-toggle"></a>
                     <div class="menu popup-block">
                         <ul class="">
-                            <li class="main-page"><a href="/"><?=GetMessage("Gla")?></a>
+                            <li class="main-page"><a href="/"><?=GetMessage("MAIN")?></a>
                             </li>
                            
                    
