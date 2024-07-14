@@ -47,20 +47,26 @@ $img = SITE_TEMPLATE_PATH."/img/rew/no_photo.jpg"
  ?>
 							<div style="clear: both;" class="review-img-wrap"><img src="<?=$img?>" alt=""></div>
 						</div>
-						<?
-						if ($arResult["PROPERTIES"]["FILE"]["VALUE"] != 0){
-							?> <p> <?=GetMessage("DOCUMENT")?></p>  <?
-						 foreach ($arResult["PROPERTIES"]["FILE"]["VALUE"] as $File )
-{?>
-<?  $Item = CFile::GetFileArray($File)  ?>
-						<div  class="exam-review-item-doc">
-                            <img class="rew-doc-ico"
-                                 src="<?=SITE_TEMPLATE_PATH?>/img/icons/pdf_ico_40.png">
-                            <a href="<?=$Item["SRC"]?> "download > <?=$Item["ORIGINAL_NAME"]?> </div>
-						<?
-					}}?>
-						
-						
+
+
+
+
+<?$file_values = $arResult["DISPLAY_PROPERTIES"]["FILE"]["FILE_VALUE"]?>
+<? if ($file_values != 0 ) {?>
+    <p><?=GetMessage("DOCUMENTS")?></p>
+    <?if (isset($file_values["SRC"])){
+        $file_values = array($file_values);?>
+
+    <? }?>
+    <?foreach($file_values as $file)  {   ?>
+        <div  class="exam-review-item-doc">
+            <img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH?>/img/icons/pdf_ico_40.png">
+            <a href="<?=$file["SRC"]?>" ><?=$file["ORIGINAL_NAME"]?></a>
+        </div>
+    <?}?>
+<?} ?>
+
+
 
 
 	
